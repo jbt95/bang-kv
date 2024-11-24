@@ -14,8 +14,6 @@ The script requires three environment variables to be set:
 - `NAMESPACE_ID`: The ID of the KV namespace you wish to purge.
 - `CLOUDFLARE_API_TOKEN`: A Cloudflare API token with permissions to access KV storage.
 
-You can set these variables in your terminal session or include them in a `.env` file if you are using a package like `dotenv`.
-
 ## Installation
 ```
 pnpm i
