@@ -36,7 +36,7 @@ async function purge() {
       mergeMap(([, data]) => data),
       map(k => k.name),
       bufferCount(BATCH_SIZE),
-      tap(keys => console.log(`Deleting batch ${keys.length}...`)),
+      tap(keys => console.log(`Deleting ${keys.length} keys...`)),
       mergeMap(keys =>
         defer(() =>
           cloudflare.kv.namespaces.bulk.delete(

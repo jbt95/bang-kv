@@ -1,21 +1,15 @@
 {
   "name": "bang-kv",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Script to purge Cloudflare KV namespace",
   "main": "/dist/index.js",
   "keywords": [],
   "author": "Jordi Bermejo Tornero",
   "license": "MIT",
-  "bin": {
-    "bang-kv": "./dist/index.js"
-  },
-  "files": [
-    "dist"
-  ],
   "scripts": {
-    "purge": "npx ts-node src/index.ts",
+    "purge": "npm run bundle && node dist/index.js",
     "bundle": "tsup",
-    "upload": "pnpm bundle && npm publish"
+    "upload": "npm run bundle && npm publish"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
