@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "target": "ESNext",
+    "noUncheckedIndexedAccess": true,
+    "lib": ["ESNext"],
+    "strict": true,
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "incremental": true,
+    "types": ["@cloudflare/workers-types"],
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "skipLibCheck": true
+  },
+  "exclude": ["node_modules" ]
+}

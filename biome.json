@@ -1,0 +1,186 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+  "vcs": { "enabled": false, "clientKind": "git", "useIgnoreFile": false },
+  "files": { "ignoreUnknown": false, "ignore": ["./src/generated"] },
+  "formatter": {
+    "enabled": true,
+    "useEditorconfig": true,
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineEnding": "lf",
+    "lineWidth": 100,
+    "attributePosition": "auto",
+    "bracketSpacing": true,
+    "ignore": [
+      "**/dist",
+      "**/worker",
+      "**/generated",
+      "**/.mf",
+      "**/.yarn",
+      "**/.pnp.*",
+      "**/storybook-static",
+      "**/.vscode",
+      "**/.wrangler",
+      "**/bitbucket-pipelines.yml",
+      "**/jest.config.json",
+      "**/README.md",
+      "**/postman",
+      "**/coverage"
+    ]
+  },
+  "organizeImports": { "enabled": true },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": false,
+      "complexity": {
+        "noUselessThisAlias": "error",
+        "noUselessTypeConstraint": "error"
+      },
+      "correctness": {
+        "noUnusedVariables": "error",
+        "useArrayLiterals": "off"
+      },
+      "style": { "noNamespace": "error", "useAsConstAssertion": "error" },
+      "suspicious": {
+        "noExplicitAny": "error",
+        "noExtraNonNullAssertion": "error",
+        "noMisleadingInstantiator": "error",
+        "noUnsafeDeclarationMerging": "error",
+        "useNamespaceKeyword": "error"
+      }
+    },
+    "ignore": [
+      "src/generated",
+      ".yarn",
+      ".wrangler",
+      "cli",
+      "eslint.config.js",
+      "src/core/date-time/index.ts",
+      "src/core/cloudflare/kv/*.ts",
+      "src/core/errors/http-error.ts"
+    ]
+  },
+  "javascript": {
+    "formatter": {
+      "jsxQuoteStyle": "double",
+      "quoteProperties": "asNeeded",
+      "trailingCommas": "all",
+      "semicolons": "asNeeded",
+      "arrowParentheses": "asNeeded",
+      "bracketSameLine": false,
+      "quoteStyle": "single",
+      "attributePosition": "auto",
+      "bracketSpacing": true
+    },
+    "globals": [
+      "onlanguagechange",
+      "onerror",
+      "onunhandledrejection",
+      "onmessage",
+      "onrejectionhandled",
+      "onmessageerror"
+    ]
+  },
+  "overrides": [
+    {
+      "include": ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.cts"],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noConstAssign": "off",
+            "noGlobalObjectCalls": "off",
+            "noInvalidBuiltinInstantiation": "off",
+            "noInvalidConstructorSuper": "off",
+            "noNewSymbol": "off",
+            "noSetterReturn": "off",
+            "noUndeclaredVariables": "off",
+            "noUnreachable": "off",
+            "noUnreachableSuper": "off"
+          },
+          "style": {
+            "noArguments": "error",
+            "noVar": "error",
+            "useConst": "error"
+          },
+          "suspicious": {
+            "noDuplicateClassMembers": "off",
+            "noDuplicateObjectKeys": "off",
+            "noDuplicateParameters": "off",
+            "noFunctionAssign": "off",
+            "noImportAssign": "off",
+            "noRedeclare": "off",
+            "noUnsafeNegation": "off",
+            "useGetterReturn": "off"
+          }
+        }
+      }
+    },
+    {
+      "include": ["src/**/*.ts"],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noInvalidUseBeforeDeclaration": "off",
+            "noUnusedVariables": "warn"
+          },
+          "style": { "noParameterAssign": "error" },
+          "suspicious": {
+            "noEmptyBlockStatements": "off",
+            "useDefaultSwitchClauseLast": "warn"
+          }
+        }
+      }
+    },
+    {
+      "include": ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.cts"],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noConstAssign": "off",
+            "noGlobalObjectCalls": "off",
+            "noInvalidBuiltinInstantiation": "off",
+            "noInvalidConstructorSuper": "off",
+            "noNewSymbol": "off",
+            "noSetterReturn": "off",
+            "noUndeclaredVariables": "off",
+            "noUnreachable": "off",
+            "noUnreachableSuper": "off"
+          },
+          "style": {
+            "noArguments": "error",
+            "noVar": "error",
+            "useConst": "error"
+          },
+          "suspicious": {
+            "noDuplicateClassMembers": "off",
+            "noDuplicateObjectKeys": "off",
+            "noDuplicateParameters": "off",
+            "noFunctionAssign": "off",
+            "noImportAssign": "off",
+            "noRedeclare": "off",
+            "noUnsafeNegation": "off",
+            "useGetterReturn": "off"
+          }
+        }
+      }
+    },
+    {
+      "include": ["src/**/*.ts"],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noInvalidUseBeforeDeclaration": "off",
+            "noUnusedVariables": "warn"
+          },
+          "style": { "noParameterAssign": "error" },
+          "suspicious": {
+            "noEmptyBlockStatements": "off",
+            "useDefaultSwitchClauseLast": "warn"
+          }
+        }
+      }
+    }
+  ]
+}
